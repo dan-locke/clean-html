@@ -45,7 +45,7 @@ func (r *reader) Read(b []byte) (int, error) {
 	return 1, nil
 }
 
-func newReader(text string) *reader {
+func newReader(text []byte) *reader {
 	return &reader{
 		s: text, 
 		z: int64(len(text)),
